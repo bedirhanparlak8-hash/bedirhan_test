@@ -17,3 +17,8 @@ def bolme(a, b):
 # Test etmek için:
 print("Bölme Sonucu:", bolme(10, 2))
 print("Sıfıra Bölme Testi:", bolme(10, 0))
+
+=======
+#öyle böyle bir şey
+#sldlsl
+
