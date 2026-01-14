@@ -1,0 +1,32 @@
+# Aksiyonun adı
+name: Kod Kontrol Robotu
+
+# Bu robot ne zaman çalışsın?
+on: 
+  push:      # Kod her gönderildiğinde
+    branches: [ main ] # Sadece 'main' dalına gelirse
+  pull_request: # Bir Pull Request açıldığında
+
+# Robotun yapacağı işler
+jobs:
+  kontrol-isleri:
+    # Hangi işletim sisteminde çalışsın?
+    runs-on: ubuntu-latest
+
+    steps:
+      # 1. Adım: GitHub'daki kodlarını sanal bilgisayara kopyala
+      - name: Kodları Çek
+        uses: actions/checkout@v4
+
+      # 2. Adım: Sanal bilgisayara Python yükle
+      - name: Python Kur
+        uses: actions/setup-python@v4
+        with:
+          python-version: '3.10'
+
+      # 3. Adım: Basit bir kontrol yap
+      - name: Kontrolü Başlat
+        run: |
+          echo "Şu an kodun test ediliyor..."
+          python --version
+          echo "Her şey harika görünüyor!"
