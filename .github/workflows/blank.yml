@@ -28,5 +28,5 @@ jobs:
       - name: Kontrolü Başlat
         run: |
           echo "Şu an kodun test ediliyor..."
-          python --version
+          python --versiosss
           echo "Her şey harika görünüyor!"
