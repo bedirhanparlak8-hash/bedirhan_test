@@ -1,3 +1,19 @@
-- name: Testleri Çalıştır
-        run: |
-          python -m pytest test_hesapla.py
+name: Kod Kontrol Robotu
+on: [push]
+
+jobs:
+  kontrol-isleri:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      
+      - name: Python Kur
+        uses: actions/setup-python@v4
+        with:
+          python-version: '3.10'
+          
+      - name: Test Aracını Kur
+        run: pip install pytest
+          
+      - name: Testleri Çalıştır
+        run: pytest test_hesapla.py
